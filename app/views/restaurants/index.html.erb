@@ -1,0 +1,16 @@
+<h1>My Restaurants</h1>
+ <% @restaurants.each do |restaurant| %>
+ <div class="btn-group btn btn-primary">
+    <p><%= restaurant.name %></p>
+    <p><%= restaurant.category %></p>
+</div>
+
+<% end %>
+
+<%= link_to new_restaurant_path do %>
+<i class="fa fa-plus"></i> Add a new restaurant
+<% end %>
+
+<%= link_to restaurants_path do %>
+<i class="fa fa-plus"></i> List All Restaurants
+<% end %>
